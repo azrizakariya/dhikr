@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Complete Guide to Dhikr — Every Formula, When, How Often &amp; Benefits</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --bg: #0a0a0c;
+  --surface: #131318;
+  --surface-2: #1a1a22;
+  --surface-border: #2a2a35;
+  --text: #f0ece4;
+  --text-secondary: #9a9688;
+  --accent: #c9a84c;
+  --accent-muted: rgba(201, 168, 76, 0.12);
+  --green: #4a9e6e;
+  --green-muted: rgba(74, 158, 110, 0.12);
+  --blue: #5a8ec7;
+  --blue-muted: rgba(90, 142, 199, 0.12);
+  --purple: #9a6ec7;
+  --purple-muted: rgba(154, 110, 199, 0.12);
+  --red: #c75a4a;
+  --red-muted: rgba(199, 90, 74, 0.12);
+  --teal: #4a9e9e;
+  --teal-muted: rgba(74, 158, 158, 0.12);
+  --orange: #c7894a;
+  --orange-muted: rgba(199, 137, 74, 0.12);
+  --radius: 12px;
+  --max-width: 1100px;
+  --font: 'Inter', system-ui, sans-serif;
+  --arabic: 'Amiri', serif;
+}
+html { scroll-behavior: smooth; }
+body { background: var(--bg); color: var(--text); font-family: var(--font); line-height: 1.7; font-size: 16px; -webkit-font-smoothing: antialiased; }
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 24px; }
+
+/* HERO */
+.hero { min-height: 70vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 80px 24px; position: relative; }
+.hero::before { content: ''; position: absolute; top: -200px; left: 50%; transform: translateX(-50%); width: 600px; height: 600px; background: radial-gradient(circle, rgba(201,168,76,0.08) 0%, transparent 70%); pointer-events: none; }
+.hero-bismillah { font-family: var(--arabic); font-size: 2.2rem; color: var(--accent); margin-bottom: 12px; }
+.hero h1 { font-size: clamp(2.2rem, 5vw, 3.8rem); font-weight: 800; letter-spacing: -1px; margin-bottom: 8px; background: linear-gradient(135deg, var(--text), var(--accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.hero-arabic { font-family: var(--arabic); font-size: 2rem; color: var(--accent); margin-bottom: 20px; }
+.hero-sub { font-size: 1.05rem; color: var(--text-secondary); max-width: 650px; margin-bottom: 40px; }
+.hero-ayah { background: var(--surface); border: 1px solid var(--surface-border); border-radius: var(--radius); padding: 24px 32px; max-width: 650px; }
+.hero-ayah .ar { font-family: var(--arabic); font-size: 1.5rem; color: var(--accent); line-height: 2.2; direction: rtl; margin-bottom: 8px; }
+.hero-ayah .tr { font-style: italic; color: var(--text-secondary); font-size: 0.95rem; }
+.hero-ayah .ref { color: var(--accent); font-size: 0.8rem; font-weight: 600; margin-top: 6px; }
+
+/* TOC */
+.toc { background: var(--surface); border: 1px solid var(--surface-border); border-radius: var(--radius); padding: 28px 32px; margin-bottom: 80px; }
+.toc h2 { font-size: 1rem; color: var(--accent); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 16px; }
+.toc-grid { display: flex; flex-wrap: wrap; gap: 8px; }
+.toc-link { display: inline-flex; align-items: center; gap: 8px; padding: 8px 14px; border-radius: 8px; text-decoration: none; color: var(--text); font-size: 0.85rem; background: var(--surface-2); border: 1px solid var(--surface-border); transition: all 0.2s; }
+.toc-link:hover { border-color: var(--accent); background: var(--accent-muted); }
+
+/* SECTIONS */
+section { margin-bottom: 80px; opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
+section.visible { opacity: 1; transform: translateY(0); }
+.section-tag { display: inline-block; padding: 4px 12px; border-radius: 20px; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 12px; }
+.tag-gold { background: var(--accent-muted); color: var(--accent); }
+.tag-green { background: var(--green-muted); color: var(--green); }
+.tag-blue { background: var(--blue-muted); color: var(--blue); }
+.tag-purple { background: var(--purple-muted); color: var(--purple); }
+.tag-teal { background: var(--teal-muted); color: var(--teal); }
+.tag-orange { background: var(--orange-muted); color: var(--orange); }
+.tag-red { background: var(--red-muted); color: var(--red); }
+section h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 700; margin-bottom: 6px; letter-spacing: -0.5px; }
+section .sec-intro { color: var(--text-secondary); font-size: 0.95rem; max-width: 750px; margin-bottom: 28px; }
+
+/* DHIKR CARD */
+.dhikr-card { background: var(--surface); border: 1px solid var(--surface-border); border-radius: var(--radius); padding: 28px; margin-bottom: 20px; transition: border-color 0.3s; }
+.dhikr-card:hover { border-color: var(--accent); }
+.dhikr-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; margin-bottom: 12px; flex-wrap: wrap; }
+.dhikr-title { font-size: 1.1rem; font-weight: 700; }
+.dhikr-badges { display: flex; gap: 6px; flex-wrap: wrap; }
+.badge { display: inline-block; padding: 3px 10px; border-radius: 20px; font-size: 0.7rem; font-weight: 600; white-space: nowrap; }
+.b-gold { background: var(--accent-muted); color: var(--accent); }
+.b-green { background: var(--green-muted); color: var(--green); }
+.b-blue { background: var(--blue-muted); color: var(--blue); }
+.b-purple { background: var(--purple-muted); color: var(--purple); }
+.b-teal { background: var(--teal-muted); color: var(--teal); }
+.b-orange { background: var(--orange-muted); color: var(--orange); }
+.b-red { background: var(--red-muted); color: var(--red); }
+.dhikr-arabic { font-family: var(--arabic); font-size: 1.6rem; color: var(--accent); direction: rtl; text-align: right; line-height: 2.2; margin-bottom: 6px; }
+.dhikr-translit { font-style: italic; color: var(--teal); font-size: 0.9rem; margin-bottom: 4px; }
+.dhikr-meaning { color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 16px; padding-bottom: 16px; border-bottom: 1px solid var(--surface-border); }
+.dhikr-details { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 16px; }
+.detail-box { background: var(--surface-2); border-radius: 8px; padding: 14px; }
+.detail-label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px; font-weight: 700; margin-bottom: 4px; }
+.detail-label.when { color: var(--blue); }
+.detail-label.how { color: var(--green); }
+.detail-label.benefit { color: var(--accent); }
+.detail-label.source { color: var(--purple); }
+.detail-text { font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5; }
+
+/* CALLOUT */
+.callout { background: var(--accent-muted); border: 1px solid rgba(201,168,76,0.25); border-radius: var(--radius); padding: 18px 22px; margin-bottom: 24px; display: flex; gap: 12px; }
+.callout-icon { font-size: 1.1rem; flex-shrink: 0; }
+.callout p { font-size: 0.88rem; color: var(--text); }
+
+/* HADITH */
+.hadith { background: var(--surface); border-left: 3px solid var(--green); border-radius: 0 var(--radius) var(--radius) 0; padding: 20px 24px; margin-bottom: 20px; }
+.hadith .ar { font-family: var(--arabic); font-size: 1.15rem; color: var(--green); direction: rtl; text-align: right; line-height: 2.2; margin-bottom: 8px; }
+.hadith .tr { color: var(--text); font-size: 0.9rem; margin-bottom: 4px; }
+.hadith .ref { color: var(--green); font-size: 0.78rem; font-weight: 600; }
+
+/* TABLE */
+.table-wrap { overflow-x: auto; margin-bottom: 28px; border-radius: var(--radius); border: 1px solid var(--surface-border); }
+table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
+th { background: var(--surface-2); color: var(--accent); font-weight: 600; text-align: left; padding: 12px 16px; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; }
+td { padding: 12px 16px; border-top: 1px solid var(--surface-border); color: var(--text-secondary); vertical-align: top; }
+tr:nth-child(even) td { background: rgba(255,255,255,0.02); }
+td:first-child { color: var(--text); font-weight: 500; }
+td .ar { font-family: var(--arabic); color: var(--accent); font-size: 1.1rem; direction: rtl; display: block; margin-bottom: 2px; }
+
+/* FOOTER */
+footer { text-align: center; padding: 60px 24px; color: var(--text-secondary); font-size: 0.85rem; border-top: 1px solid var(--surface-border); }
+footer .ar { font-family: var(--arabic); font-size: 1.2rem; color: var(--accent); margin-bottom: 8px; }
+
+@media (max-width: 640px) {
+  .dhikr-details { grid-template-columns: 1fr; }
+  .dhikr-header { flex-direction: column; }
+  section { margin-bottom: 56px; }
+  .hero { min-height: 60vh; padding: 48px 20px; }
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-bismillah">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
+  <h1>Complete Guide to Dhikr</h1>
+  <div class="hero-arabic">أَذْكَار</div>
+  <p class="hero-sub">Every dhikr formula from the Qur'an and Sunnah — when to say it, how often, and the specific benefits narrated by the Prophet &#65018;. Organised by category for daily practice.</p>
+  <div class="hero-ayah">
+    <div class="ar">يَا أَيُّهَا الَّذِينَ آمَنُوا اذْكُرُوا اللَّهَ ذِكْرًا كَثِيرًا ۝ وَسَبِّحُوهُ بُكْرَةً وَأَصِيلًا</div>
+    <div class="tr">"O you who believe, remember Allah with much remembrance. And glorify Him morning and evening."</div>
+    <div class="ref">Surah Al-Ahzab 33:41-42</div>
+  </div>
+</header>
+
+<div class="container">
+
+  <div class="toc">
+    <h2>Categories</h2>
+    <div class="toc-grid">
+      <a href="#core" class="toc-link">Core Dhikr Formulas</a>
+      <a href="#names" class="toc-link">Names of Allah in Dhikr</a>
+      <a href="#morning" class="toc-link">Morning Adhkar</a>
+      <a href="#evening" class="toc-link">Evening Adhkar</a>
+      <a href="#salah" class="toc-link">After Salah</a>
+      <a href="#sleep" class="toc-link">Before Sleep</a>
+      <a href="#waking" class="toc-link">Upon Waking</a>
+      <a href="#daily" class="toc-link">Daily Situational</a>
+      <a href="#special" class="toc-link">Special Times &amp; Virtues</a>
+      <a href="#distress" class="toc-link">Distress &amp; Protection</a>
+      <a href="#wird" class="toc-link">Building Your Wird</a>
+    </div>
+  </div>
+
+  <!-- ===== CORE DHIKR FORMULAS ===== -->
+  <section id="core">
+    <div class="section-tag tag-gold">Foundation</div>
+    <h2>Core Dhikr Formulas</h2>
+    <p class="sec-intro">These are the primary words of remembrance — the building blocks of all dhikr. Each one has specific virtues narrated from the Prophet &#65018;.</p>
+
+    <!-- 1. Tahlil -->
+    <div class="dhikr-card">
+      <div class="dhikr-header">
+        <div class="dhikr-title">Tahlil — Declaration of Oneness</div>
+        <div class="dhikr-badges"><span class="badge b-gold">Best Dhikr</span><span class="badge b-green">100x Daily</span></div>
+      </div>
+      <div class="dhikr-arabic">لَا إِلَٰهَ إِلَّا اللَّهُ</div>
+      <div class="dhikr-translit">La ilaha illallah</div>
+      <div class="dhikr-meaning">"There is no god but Allah." — The greatest statement a human being can utter. The entire message of every Prophet distilled into one phrase.</div>
+      <div class="dhikr-details">
+        <div class="detail-box"><div class="detail-label when">When</div><div class="detail-text">Anytime. The Prophet &#65018; said it is "the best dhikr" (Tirmidhi 3383). Say it throughout the day, especially in the morning, evening, and after salah. Most emphasised during the last third of the night.</div></div>
+        <div class="detail-box"><div class="detail-label how">How Often</div><div class="detail-text"><strong>100x daily</strong> specifically narrated. Also: 10x after every salah (Nasa'i). As a general dhikr: unlimited. Some scholars recommend 1,000x or more for seekers on the path.</div></div>
+        <div class="detail-box"><div class="detail-label benefit">Benefits</div><div class="detail-text">100x/day = reward of freeing 10 slaves, 100 good deeds, 100 sins erased, protection from Shaytan until evening, and no one comes with anything better except one who did more (Bukhari 6403). Best thing said by all Prophets on the Day of Arafah (Tirmidhi 3585).</div></div>
+        <div class="detail-box"><div class="detail-label source">Source</div><div class="detail-text">Bukhari 6403, Muslim 2693, Tirmidhi 3383, 3585</div></div>
+      </div>
+    </div>
+
+    <!-- Extended Tahlil -->
+    <div class="dhikr-card">
+      <div class="dhikr-header">
+        <div class="dhikr-title">Extended Tahlil — With Praise</div>
+        <div class="dhikr-badges"><span class="badge b-gold">100x Daily</span></div>
+      </div>
+      <div class="dhikr-arabic">لَا إِلَٰهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَىٰ كُلِّ شَيْءٍ قَدِيرٌ</div>
+      <div class="dhikr-translit">La ilaha illallahu wahdahu la sharika lah, lahu al-mulku wa lahu al-hamdu wa huwa 'ala kulli shay'in qadir</div>
+      <div class="dhikr-meaning">"There is no god but Allah alone, with no partner. His is the sovereignty and His is the praise, and He has power over all things."</div>
+      <div class="dhikr-details">
+        <div class="detail-box"><div class="detail-label when">When</div><div class="detail-text">Morning (after Fajr) and evening. After every salah (1x or 10x). Can be said anytime as general dhikr.</div></div>
+        <div class="detail-box"><div class="detail-label how">How Often</div><div class="detail-text"><strong>100x daily</strong> for the full reward. 10x = reward of freeing 4 slaves from Isma'il's descendants (Muslim 2693). Also narrated 10x in the morning.</div></div>
+        <div class="detail-box"><div class="detail-label benefit">Benefits</div><div class="detail-text">100x = equivalent of freeing 10 slaves, 100 hasanat, 100 sins wiped, fortress against Shaytan all day (Bukhari 6403, Muslim 2691). 10x morning = protection and reward of freeing 4 slaves (Ahmad).</div></div>
+        <div class="detail-box"><div class="detail-label source">Source</div><div class="detail-text">Bukhari 6403, Muslim 2691, 2693, Ahmad 8704</div></div>
+      </div>
+    </div>
+
+    <!-- 2. Tasbih -->
+    <div class="dhikr-card">
+      <div class="dhikr-header">
+        <div class="dhikr-title">Tasbih — Glorification</div>
+        <div class="dhikr-badges"><span class="badge b-green">Beloved to Allah</span></div>
+      </div>
+      <div class="dhikr-arabic">سُبْحَانَ اللَّهِ</div>
+      <div class="dhikr-translit">Subhanallah</div>
+      <div class="dhikr-meaning">"Glory be to Allah" / "Allah is free from all imperfection." — Declaring Allah's transcendence above any deficiency or likeness to creation.</div>
+      <div class="dhikr-details">
+        <div class="detail-box"><div class="detail-label when">When</div><div class="detail-text">After every salah (33x), morning and evening, and anytime throughout the day. Especially when witnessing something awe-inspiring in creation.</div></div>
+        <div class="detail-box"><div class="detail-label how">How Often</div><div class="detail-text"><strong>33x after every salah</strong> (as part of the tasbih-tahmid-takbir set). Also: "Two words light on the tongue, heavy on the scales" when combined with wa bihamdihi (see below).</div></div>
+        <div class="detail-box"><div class="detail-label benefit">Benefits</div><div class="detail-text">Each tasbih is a sadaqah (charity) (Muslim 1007). Fills the scales on Judgment Day (Muslim 223). The Prophet &#65018; said: "Subhanallah and Alhamdulillah fill what is between the heavens and earth" (Muslim 223).</div></div>
+        <div class="detail-box"><div class="detail-label source">Source</div><div class="detail-text">Muslim 223, Muslim 1007, Bukhari 843</div></div>
+      </div>
+    </div>
+
+    <!-- Subhanallahi wa bihamdihi -->
+    <div class="dhikr-card">
+      <div class="dhikr-header">
+        <div class="dhikr-title">Tasbih with Praise</div>
+        <div class="dhikr-badges"><span class="badge b-gold">100x Daily</span><span class="badge b-green">Sins Forgiven</span></div>
+      </div>
+      <div class="dhikr-arabic">سُبْحَانَ اللَّهِ وَبِحَمْدِهِ</div>
+      <div class="dhikr-translit">Subhanallahi wa bihamdihi</div>
+      <div class="dhikr-meaning">"Glory be to Allah and praise be to Him."</div>
+      <div class="dhikr-details">
+        <div class="detail-box"><div class="detail-label when">When</div><div class="detail-text">Morning and evening especially. Can be said anytime. The Prophet &#65018; specifically loved this dhikr.</div></div>
+        <div class="detail-box"><div class="detail-label how">How Often</div><div class="detail-text"><strong>100x daily.</strong> The Prophet &#65018; said specifically 100 times a day. Also recommended in the morning and evening.</div></div>
+        <div class="detail-box"><div class="detail-label benefit">Benefits</div><div class="detail-text">100x/day = all sins forgiven, even if they were like the foam of the sea (Bukhari 6405, Muslim 2691). A palm tree is planted for you in Jannah for each one (Tirmidhi 3464). Whoever says it in the morning and evening 100x, no one comes on Judgment Day with anything better except one who said it more (Muslim 2692).</div></div>
+        <div class="detail-box"><div class="detail-label source">Source</div><div class="detail-text">Bukhari 6405, Muslim 2691, 2692, Tirmidhi 3464</div></div>
+      </div>
+    </div>
+
+    <!-- Subhanallah al-Adhim wa bihamdihi -->
+    <div class="dhikr-card">
+      <div class="dhikr-header">
+        <div class="dhikr-title">The Two Words — Light yet Heavy</div>
+        <div class="dhikr-badges"><span class="badge b-gold">Light on Tongue, Heavy on Scales</span></div>
+      </div>
+      <div class="dhikr-arabic">سُبْحَانَ اللَّهِ وَبِحَمْدِهِ، سُبْحَانَ اللَّهِ الْعَظِيمِ</div>
+      <div class="dhikr-translit">Subhanallahi wa bihamdihi, Subhanallahil-Adhim</div>
+      <div class="dhikr-meaning">"Glory and praise be to Allah. Glory be to Allah, the Magnificent."</div>
+      <div class="dhikr-details">
+        <div class="detail-box"><div class="detail-label when">When</div><div class="detail-text">Anytime. The Prophet &#65018; singled these out as the best words you could say.</div></div>
+        <div class="detail-box"><div class="detail-label how">How Often</div><div class="detail-text">As much as possible. No set limit narrated — the virtue is in their weight, not a specific count.</div></div>
+        <div class="detail-box"><div class="detail-label benefit">Benefits</div><div class="detail-text">"Two words that are light on the tongue, heavy on the scales, and beloved to al-Rahman" (Bukhari 7563, Muslim 2694). This is the last hadith in Sahih al-Bukhari — Imam Bukhari chose to end his collection with it.</div></div>
+        <div class="detail-box"><div class="detail-label source">Source</div><div class="detail-text">Bukhari 7563, Muslim 2694</div></div>
+      </div>
+    </div>
+
+    <!-- 3. Tahmid -->
+    <div class="dhikr-card">
+      <div class="dhikr-header">
+        <div class="dhikr-title">Tahmid — Praise</div>
+        <div class="dhikr-badges"><span class="badge b-green">Fills the Scales</span></div>
+      </div>
+      <div class="dhikr-arabic">الْحَمْدُ لِلَّهِ</div>
+      <div class="dhikr-translit">Alhamdulillah</div>
+      <div class="dhikr-meaning">"All praise belongs to Allah." — Acknowledging that every blessing, every moment, every breath is from Allah alone.</div>
+      <div class="dhikr-details">
+        <div class="detail-box"><div class="detail-label when">When</div><div class="detail-text">After every salah (33x), after eating, after drinking, after sneezing, upon waking, when receiving good news, when putting on new clothes — and in all circumstances, including hardship.</div></div>
+        <div class="detail-box"><div class="detail-label how">How Often</div><div class="detail-text"><strong>33x after every salah.</strong> After eating: once. After sneezing: once. As general dhikr: unlimited.</div></div>
+        <div class="detail-box"><div class="detail-label benefit">Benefits</div><div class="detail-text">"Alhamdulillah fills the scales" (Muslim 223). After eating: "Whoever eats food and says Alhamdulillah... his past sins are forgiven" (Tirmidhi 3458). After sneezing, the response is "Yarhamukallah" — it connects people through mercy.</div></div>
+        <div class="detail-box"><div class="detail-label source">Source</div><div class="detail-text">Muslim 223, Tirmidhi 3458, Bukhari 6224</div></div>
+      </div>
+    </div>
+
+    <!-- 4. Takbir -->
+    <div class="dhikr-card">
+      <div class="dhikr-header">
+        <div class="dhikr-title">Takbir — Magnification</div>
+        <div class="dhikr-badges"><span class="badge b-blue">34x After Salah</span></div>
+      </div>
+      <div class="dhikr-arabic">اللَّهُ أَكْبَرُ</div>
+      <div class="dhikr-translit">Allahu Akbar</div>
+      <div class="dhikr-meaning">"Allah is Greater" — Greater than anything you can conceive, greater than any worry, any desire, any creation. Said at every transition in salah because you are turning away from everything else toward Allah.</div>
+      <div class="dhikr-details">
+        <div class="detail-box"><div class="detail-label when">When</div><div class="detail-text">After every salah (34x, completing the 100 with tasbih and tahmid). During salah at every transition. During the days of Dhul Hijjah and Eid. When climbing a hill during travel.</div></div>
+        <div class="detail-box"><div class="detail-label how">How Often</div><div class="detail-text"><strong>34x after every salah</strong> (Bukhari 843). During Dhul Hijjah: as much as possible. During travel on high ground.</div></div>
+        <div class="detail-box"><div class="detail-label benefit">Benefits</div><div class="detail-text">Part of the 33-33-34 formula after salah which equals 99, then complete with La ilaha illallah... = 100. The Prophet &#65018; said: "Whoever says these after every salah will have all sins forgiven even if they were like the foam of the sea" (Muslim 597).</div></div>
+        <div class="detail-box"><div class="detail-label source">Source</div><div class="detail-text">Muslim 597, Bukhari 843</div></div>
+      </div>
+    </div>
+
+    <!-- 5. Hawqalah -->
+    <div class="dhikr-card">
+      <div class="dhikr-header">
+        <div class="dhikr-title">Hawqalah — Declaration of Dependence</div>
+        <div class="dhikr-badges"><span class="badge b-purple">Treasure of Jannah</span></div>
+      </div>
+      <div class="dhikr-arabic">لَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللَّهِ</div>
+      <div class="dhikr-translit">La hawla wa la quwwata illa billah</div>
+      <div class="dhikr-meaning">"There is no power and no strength except with Allah." — The ultimate declaration of human dependence on Allah. Acknowledging that you cannot even move, think, or breathe without His permission and aid.</div>
+      <div class="dhikr-details">
+        <div class="detail-box"><div class="detail-label when">When</div><div class="detail-text">After every adhan (the mu'adhdhin says "hayya 'ala al-salah" → you respond with this). Also anytime you feel overwhelmed, powerless, or facing a difficult situation. General dhikr anytime.</div></div>
+        <div class="detail-box"><div class="detail-label how">How Often</div><div class="detail-text">After every adhan. The Prophet &#65018; told Abu Musa al-Ash'ari to say it abundantly (Bukhari 4205). No specific count — say it as much as possible.</div></div>
+        <div class="detail-box"><div class="detail-label benefit">Benefits</div><div class="detail-text">"A treasure from the treasures of Paradise" (Bukhari 4205, Muslim 2704). Cure for 99 diseases, the least of which is worry (Ibn Abi al-Dunya). It is the essence of tawakkul in verbal form.</div></div>
+        <div class="detail-box"><div class="detail-label source">Source</div><div class="detail-text">Bukhari 4205, Muslim 2704</div></div>
+      </div>
+    </div>
+
+    <!-- 6. Istighfar -->
+    <div class="dhikr-card">
+      <div class="dhikr-header">
+        <div class="dhikr-title">Istighfar — Seeking Forgiveness</div>
+        <div class="dhikr-badges"><span class="badge b-green">100x Daily</span><span class="badge b-gold">Opens Provision</span></div>
+      </div>
+      <div class="dhikr-arabic">أَسْتَغْفِرُ اللَّهَ</div>
+      <div class="dhikr-translit">Astaghfirullah</div>
+      <div class="dhikr-meaning">"I seek forgiveness from Allah." — Not just for sins you know about, but for shortcomings you don't even recognise. The Prophet &#65018; sought forgiveness 70-100 times every single day — and he was sinless.</div>
+      <div class="dhikr-details">
+        <div class="detail-box"><div class="detail-label when">When</div><div class="detail-text">After every salah (3x, Sunnah to say immediately after salam). Throughout the day — especially after sinning, before sleeping, and in the last third of the night. Also at gatherings as a closing (kaffarah al-majlis).</div></div>
+        <div class="detail-box"><div class="detail-label how">How Often</div><div class="detail-text"><strong>3x after every salah.</strong> The Prophet &#65018; said: "I seek forgiveness from Allah more than 70 times a day" (Bukhari 6307). Minimum: 100x daily recommended by scholars.</div></div>
+        <div class="detail-box"><div class="detail-label benefit">Benefits</div><div class="detail-text">"Whoever makes istighfar a constant practice, Allah will make for him a way out of every difficulty, relief from every anxiety, and provision from where he does not expect" (Abu Dawud 1518). Nuh told his people: "Seek forgiveness... He will send rain, give you wealth and children, and grant you gardens and rivers" (71:10-12).</div></div>
+        <div class="detail-box"><div class="detail-label source">Source</div><div class="detail-text">Bukhari 6307, Abu Dawud 1518, Muslim 591, Qur'an 71:10-12</div></div>
+      </div>
+    </div>
+
+    <!-- Sayyid al-Istighfar -->
+    <div class="dhikr-card">
+      <div class="dhikr-header">
+        <div class="dhikr-title">Sayyid al-Istighfar — The Master of Forgiveness</div>
+        <div class="dhikr-badges"><span class="badge b-gold">Best Istighfar</span><span class="badge b-green">Guaranteed Jannah</span></div>
+      </div>
+      <div class="dhikr-arabic">اللَّهُمَّ أَنْتَ رَبِّي لَا إِلَٰهَ إِلَّا أَنْتَ، خَلَقْتَنِي وَأَنَا عَبْدُكَ، وَأَنَا عَلَى عَهْدِكَ وَوَعْدِكَ مَا اسْتَطَعْتُ، أَعُوذُ بِكَ مِنْ شَرِّ مَا صَنَعْتُ، أَبُوءُ لَكَ بِنِعْمَتِكَ عَلَيَّ وَأَبُوءُ بِذَنْبِي، فَاغْفِرْ لِي فَإِنَّهُ لَا يَغْفِرُ الذُّنُوبَ إِلَّا أَنْتَ</div>
+      <div class="dhikr-translit">Allahumma anta Rabbi la ilaha illa anta, khalaqtani wa ana 'abduka, wa ana 'ala 'ahdika wa wa'dika mastata'tu, a'udhu bika min sharri ma sana'tu, abu'u laka bini'matika 'alayya wa abu'u bidhanbi, faghfir li fa innahu la yaghfiru al-dhunuba illa anta</div>
+      <div class="dhikr-meaning">"O Allah, You are my Lord. There is no god but You. You created me and I am Your servant. I uphold Your covenant and promise as best I can. I seek refuge in You from the evil of what I have done. I acknowledge Your blessings upon me, and I acknowledge my sins. So forgive me, for none forgives sins except You."</div>
+      <div class="dhikr-details">
+        <div class="detail-box"><div class="detail-label when">When</div><div class="detail-text"><strong>Morning (after Fajr) and evening (after Asr/Maghrib).</strong> The Prophet &#65018; specifically linked its virtue to these two times.</div></div>
+        <div class="detail-box"><div class="detail-label how">How Often</div><div class="detail-text"><strong>1x morning and 1x evening.</strong> Quality over quantity — say it with understanding and conviction, not rushing.</div></div>
+        <div class="detail-box"><div class="detail-label benefit">Benefits</div><div class="detail-text">"Whoever says it during the day with conviction and dies that day before evening, he is from the people of Jannah. Whoever says it at night with conviction and dies before morning, he is from the people of Jannah" (Bukhari 6306). This is one of the strongest guarantees in any hadith.</div></div>
+        <div class="detail-box"><div class="detail-label source">Source</div><div class="detail-text">Bukhari 6306</div></div>
+      </div>
+    </div>
+
+    <!-- 7. Salawat -->
+    <div class="dhikr-card">
+      <div class="dhikr-header">
+        <div class="dhikr-title">Salawat — Blessings upon the Prophet &#65018;</div>
+        <div class="dhikr-badges"><span class="badge b-gold">Mandatory</span><span class="badge b-blue">Friday: Abundant</span></div>
+      </div>
+      <div class="dhikr-arabic">اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ كَمَا صَلَّيْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ إِنَّكَ حَمِيدٌ مَجِيدٌ. اللَّهُمَّ بَارِكْ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ كَمَا بَارَكْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ إِنَّكَ حَمِيدٌ مَجِيدٌ</div>
+      <div class="dhikr-translit">Allahumma salli 'ala Muhammad wa 'ala ali Muhammad, kama sallayta 'ala Ibrahim wa 'ala ali Ibrahim, innaka Hamidun Majid. Allahumma barik 'ala Muhammad wa 'ala ali Muhammad, kama barakta 'ala Ibrahim wa 'ala ali Ibrahim, innaka Hamidun Majid.</div>
+      <div class="dhikr-meaning">The Ibrahimi Salawat — the full form taught by the Prophet &#65018; himself when the Companions asked how to send blessings upon him.</div>
+      <div class="dhikr-details">
+        <div class="detail-box"><div class="detail-label when">When</div><div class="detail-text">In tashahud (obligatory). After adhan. Abundantly on <strong>Friday</strong> — the best day of the week. When his name is mentioned. When making du'a (before and after). When entering and leaving the mosque.</div></div>
+        <div class="detail-box"><div class="detail-label how">How Often</div><div class="detail-text"><strong>10x morning and 10x evening</strong> (minimum recommended). On Friday: as much as possible. Short form: <em>Sallallahu 'alayhi wa sallam</em>. Scholars recommend 100x daily or more.</div></div>
+        <div class="detail-box"><div class="detail-label benefit">Benefits</div><div class="detail-text">1x salawat = Allah sends 10 blessings upon you, erases 10 sins, raises you 10 degrees (Muslim 384). Closest people to the Prophet on Judgment Day are those who sent the most salawat (Tirmidhi 484). Du'a is suspended between heaven and earth until you send salawat (Tirmidhi 486). "The miser is the one who hears my name and does not send salawat" (Tirmidhi 3546).</div></div>
+        <div class="detail-box"><div class="detail-label source">Source</div><div class="detail-text">Muslim 384, Tirmidhi 484, 486, 3546, Abu Dawud 1047</div></div>
+      </div>
+    </div>
+
+    <!-- 8. Basmalah -->
+    <div class="dhikr-card">
+      <div class="dhikr-header">
+        <div class="dhikr-title">Basmalah — In the Name of Allah</div>
+        <div class="dhikr-badges"><span class="badge b-teal">Before Every Action</span></div>
+      </div>
+      <div class="dhikr-arabic">بِسْمِ اللَّهِ</div>
+      <div class="dhikr-translit">Bismillah</div>
+      <div class="dhikr-meaning">"In the name of Allah." — Invoking Allah's name before every action, consecrating it and seeking His blessing and protection in it.</div>
+      <div class="dhikr-details">
+        <div class="detail-box"><div class="detail-label when">When</div><div class="detail-text">Before eating, drinking, entering the house, before wudu, before intimacy, when starting any task, when boarding a vehicle, when beginning a letter or document. Essentially: before everything.</div></div>
+        <div class="detail-box"><div class="detail-label how">How Often</div><div class="detail-text">Every single time you begin an action. It is Sunnah before eating (and some scholars say obligatory before slaughtering). Full form before eating: <em>Bismillah</em>. Full form at start of Qur'anic surahs: <em>Bismillahi al-Rahmani al-Rahim</em>.</div></div>
+        <div class="detail-box"><div class="detail-label benefit">Benefits</div><div class="detail-text">Prevents Shaytan from sharing your food (Muslim 2017). Protects the home when said upon entering (Abu Dawud 3765). Shaytan says to his companions: "You have no lodging for the night and no dinner" when Bismillah is said (Muslim 2018). General protection and barakah in every action.</div></div>
+        <div class="detail-box"><div class="detail-label source">Source</div><div class="detail-text">Muslim 2017, 2018, Abu Dawud 3765</div></div>
+      </div>
+    </div>
+
+    <!-- 9. Hasbunallah -->
+    <div class="dhikr-card">
+      <div class="dhikr-header">
+        <div class="dhikr-title">Hasbunallah — Allah is Sufficient</div>
+        <div class="dhikr-badges"><span class="badge b-purple">In Times of Trial</span></div>
+      </div>
+      <div class="dhikr-arabic">حَسْبُنَا اللَّهُ وَنِعْمَ الْوَكِيلُ</div>
+      <div class="dhikr-translit">Hasbunallahu wa ni'mal wakil</div>
+      <div class="dhikr-meaning">"Allah is sufficient for us, and He is the best Disposer of affairs."</div>
+      <div class="dhikr-details">
+        <div class="detail-box"><div class="detail-label when">When</div><div class="detail-text">When facing fear, difficulty, opposition, or overwhelming circumstances. Said by Ibrahim when thrown into the fire. Said by the Companions at the Battle of Uhud when told "the people have gathered against you" (3:173). Morning and evening adhkar (7x).</div></div>
+        <div class="detail-box"><div class="detail-label how">How Often</div><div class="detail-text"><strong>7x morning and 7x evening</strong> (narrated from the Prophet &#65018;, Abu Dawud). Also in any moment of distress or fear — no limit.</div></div>
+        <div class="detail-box"><div class="detail-label benefit">Benefits</div><div class="detail-text">"Allah will suffice you" — a direct promise when said with conviction. Ibrahim said it and the fire became cool and safe (21:69). The Companions said it at Uhud and "they returned with grace and bounty from Allah" (3:174). 7x morning/evening: "Allah will suffice him in all that concerns him" (Abu Dawud).</div></div>
+        <div class="detail-box"><div class="detail-label source">Source</div><div class="detail-text">Qur'an 3:173-174, Bukhari 4563, Abu Dawud (morning/evening narration)</div></div>
+      </div>
+    </div>
+
+    <!-- 10. Tasbi+Tahmid+Takbir combo -->
+    <div class="dhikr-card">
+      <div class="dhikr-header">
+        <div class="dhikr-title">The Eternal Goodness — al-Baqiyat al-Salihat</div>
+        <div class="dhikr-badges"><span class="badge b-gold">Best Speech After Qur'an</span></div>
+      </div>
+      <div class="dhikr-arabic">سُبْحَانَ اللَّهِ، وَالْحَمْدُ لِلَّهِ، وَلَا إِلَٰهَ إِلَّا اللَّهُ، وَاللَّهُ أَكْبَرُ</div>
+      <div class="dhikr-translit">Subhanallah, wal-hamdulillah, wa la ilaha illallah, wallahu akbar</div>
+      <div class="dhikr-meaning">"Glory be to Allah, praise be to Allah, there is no god but Allah, and Allah is the Greatest." — The four combined are called al-Baqiyat al-Salihat (the Enduring Good Deeds, referenced in Qur'an 18:46).</div>
+      <div class="dhikr-details">
+        <div class="detail-box"><div class="detail-label when">When</div><div class="detail-text">Anytime — these are the best words after the Qur'an. Say them together as a set. Morning and evening. Before sleep. As a continuous dhikr throughout the day.</div></div>
+        <div class="detail-box"><div class="detail-label how">How Often</div><div class="detail-text">No specific limit for the combined set. The Prophet &#65018; said they are more beloved to him than everything the sun rises upon (Muslim 2695). Say them as much as possible.</div></div>
+        <div class="detail-box"><div class="detail-label benefit">Benefits</div><div class="detail-text">"The most beloved speech to Allah is four: Subhanallah, Alhamdulillah, La ilaha illallah, Allahu Akbar. It does not matter which you begin with" (Muslim 2137). "More beloved to me than everything the sun rises upon" (Muslim 2695). They are the al-Baqiyat al-Salihat that remain when all worldly things perish (18:46).</div></div>
+        <div class="detail-box"><div class="detail-label source">Source</div><div class="detail-text">Muslim 2137, 2695, Qur'an 18:46</div></div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ===== NAMES OF ALLAH IN DHIKR ===== -->
+  <section id="names">
+    <div class="section-tag tag-purple">Divine Names</div>
+    <h2>Names of Allah in Dhikr</h2>
+    <p class="sec-intro">Some of Allah's names have specific dhikr formulas and virtues attached to them in the Sunnah.</p>
+
+    <div class="dhikr-card">
+      <div class="dhikr-header">
+        <div class="dhikr-title">Ya Hayyu Ya Qayyum — The Living, The Sustainer</div>
+        <div class="dhikr-badges"><span class="badge b-gold">Ism al-A'dham</span></div>
+      </div>
+      <div class="dhikr-arabic">يَا حَيُّ يَا قَيُّومُ بِرَحْمَتِكَ أَسْتَغِيثُ</div>
+      <div class="dhikr-translit">Ya Hayyu Ya Qayyum, bi rahmatika astaghith</div>
+      <div class="dhikr-meaning">"O Ever-Living, O Sustainer, by Your mercy I seek help."</div>
+      <div class="dhikr-details">
+        <div class="detail-box"><div class="detail-label when">When</div><div class="detail-text">In times of distress. Before du'a. The Prophet &#65018; would say this when something distressed him. Some scholars say al-Hayy al-Qayyum is part of Allah's Greatest Name (Ism al-A'dham).</div></div>
+        <div class="detail-box"><div class="detail-label benefit">Benefits</div><div class="detail-text">The Prophet &#65018; frequently used this in du'a. Contains what some scholars identify as al-Ism al-A'dham — the Greatest Name of Allah by which du'a is always answered (Tirmidhi 3524). Anas said: "When any matter grieved the Prophet, he would say: Ya Hayyu Ya Qayyum..." (Tirmidhi 3524).</div></div>
+        <div class="detail-box"><div class="detail-label source">Source</div><div class="detail-text">Tirmidhi 3524, Hakim 1/509</div></div>
+      </div>
+    </div>
+
+    <div class="dhikr-card">
+      <div class="dhikr-header">
+        <div class="dhikr-title">Ya Dhal-Jalali wal-Ikram</div>
+        <div class="dhikr-badges"><span class="badge b-purple">Persist in This</span></div>
+      </div>
+      <div class="dhikr-arabic">يَا ذَا الْجَلَالِ وَالْإِكْرَامِ</div>
+      <div class="dhikr-translit">Ya Dhal-Jalali wal-Ikram</div>
+      <div class="dhikr-meaning">"O Possessor of Majesty and Honour."</div>
+      <div class="dhikr-details">
+        <div class="detail-box"><div class="detail-label when">When</div><div class="detail-text">In du'a. The Prophet &#65018; specifically said: "Persist in [saying]: Ya Dhal-Jalali wal-Ikram" (Tirmidhi 3524, Nasa'i). Also the last verse of Surah al-Rahman (55:78).</div></div>
+        <div class="detail-box"><div class="detail-label benefit">Benefits</div><div class="detail-text">The Prophet &#65018; commanded persistence in this particular invocation. It combines both aspects of Allah — His overwhelming Majesty (Jalal) and His generous Honour (Ikram). Reciting it connects you to both fear and hope simultaneously.</div></div>
+        <div class="detail-box"><div class="detail-label source">Source</div><div class="detail-text">Tirmidhi 3524, Nasa'i in al-Sunan al-Kubra</div></div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ===== MORNING ADHKAR ===== -->
+  <section id="morning">
+    <div class="section-tag tag-blue">Morning</div>
+    <h2>Morning Adhkar (Adhkar al-Sabah)</h2>
+    <p class="sec-intro">Said after Fajr prayer until sunrise. These form a spiritual shield for the entire day. The Prophet &#65018; never missed them.</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Dhikr</th><th>Count</th><th>Benefit</th><th>Source</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="ar">أَعُوذُ بِاللَّهِ مِنَ الشَّيْطَانِ الرَّجِيمِ</span> + Ayat al-Kursi (2:255)</td>
+            <td>1x</td>
+            <td>Whoever recites it in the morning is protected from jinn until evening; and in the evening, until morning</td>
+            <td>Hakim 1/562, Nasa'i in al-Kubra</td>
+          </tr>
+          <tr>
+            <td><span class="ar">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</span> + Surah Al-Ikhlas, Al-Falaq, Al-Nas</td>
+            <td>3x each</td>
+            <td>"They will suffice you against everything" (Tirmidhi 3575). Protection from all harm — evil eye, magic, jinn, and all evil.</td>
+            <td>Tirmidhi 3575, Abu Dawud 5082</td>
+          </tr>
+          <tr>
+            <td>Sayyid al-Istighfar (see above)</td>
+            <td>1x</td>
+            <td>Die before evening = guaranteed Jannah</td>
+            <td>Bukhari 6306</td>
+          </tr>
+          <tr>
+            <td><span class="ar">أَصْبَحْنَا وَأَصْبَحَ الْمُلْكُ لِلَّهِ وَالْحَمْدُ لِلَّهِ، لَا إِلَٰهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَىٰ كُلِّ شَيْءٍ قَدِيرٌ</span><br>"We have entered the morning and the sovereignty belongs to Allah..."</td>
+            <td>1x</td>
+            <td>Comprehensive morning declaration — acknowledges Allah's sovereignty, seeks the good of the day, seeks refuge from its evil</td>
+            <td>Muslim 2723</td>
+          </tr>
+          <tr>
+            <td><span class="ar">اللَّهُمَّ بِكَ أَصْبَحْنَا وَبِكَ أَمْسَيْنَا وَبِكَ نَحْيَا وَبِكَ نَمُوتُ وَإِلَيْكَ النُّشُورُ</span><br>"O Allah, by You we enter the morning, by You we enter the evening, by You we live, by You we die, and to You is the resurrection"</td>
+            <td>1x</td>
+            <td>Complete surrender of your day to Allah — acknowledging He controls life, death, and resurrection</td>
+            <td>Tirmidhi 3391, Abu Dawud 5068</td>
+          </tr>
+          <tr>
+            <td><span class="ar">اللَّهُمَّ إِنِّي أَسْأَلُكَ الْعَافِيَةَ فِي الدُّنْيَا وَالْآخِرَةِ</span><br>"O Allah, I ask You for wellbeing in this world and the Hereafter"</td>
+            <td>1x</td>
+            <td>The Prophet &#65018; never missed this du'a. He told Abbas: "Ask Allah for al-'afiyah (wellbeing), for no one is given anything better after yaqin (certainty) than 'afiyah" (Tirmidhi 3558).</td>
+            <td>Tirmidhi 3558, Ibn Majah 3871</td>
+          </tr>
+          <tr>
+            <td><span class="ar">اللَّهُمَّ عَافِنِي فِي بَدَنِي، اللَّهُمَّ عَافِنِي فِي سَمْعِي، اللَّهُمَّ عَافِنِي فِي بَصَرِي</span><br>"O Allah, grant me wellbeing in my body, hearing, and sight"</td>
+            <td>3x</td>
+            <td>Specific protection for body, hearing, and sight — the faculties you need most. Also includes: "There is no god but You" (Abu Dawud 5090).</td>
+            <td>Abu Dawud 5090</td>
+          </tr>
+          <tr>
+            <td><span class="ar">بِسْمِ اللَّهِ الَّذِي لَا يَضُرُّ مَعَ اسْمِهِ شَيْءٌ فِي الْأَرْضِ وَلَا فِي السَّمَاءِ وَهُوَ السَّمِيعُ الْعَلِيمُ</span><br>"In the name of Allah with whose name nothing can harm in the earth or the heavens, and He is the All-Hearing, All-Knowing"</td>
+            <td>3x</td>
+            <td>"Nothing will harm him" (Tirmidhi 3388). Complete protection from all harm for the day — physical, spiritual, and from evil eye.</td>
+            <td>Tirmidhi 3388, Abu Dawud 5088</td>
+          </tr>
+          <tr>
+            <td><span class="ar">رَضِيتُ بِاللَّهِ رَبًّا وَبِالْإِسْلَامِ دِينًا وَبِمُحَمَّدٍ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ نَبِيًّا</span><br>"I am pleased with Allah as Lord, Islam as religion, and Muhammad &#65018; as Prophet"</td>
+            <td>3x</td>
+            <td>"It is a right upon Allah to please him on the Day of Judgment" (Ahmad 18967). Whoever says it becomes deserving of Allah's pleasure.</td>
+            <td>Ahmad 18967, Abu Dawud 5072</td>
+          </tr>
+          <tr>
+            <td><span class="ar">سُبْحَانَ اللَّهِ وَبِحَمْدِهِ</span></td>
+            <td>100x</td>
+            <td>Sins forgiven even if like the foam of the sea</td>
+            <td>Bukhari 6405, Muslim 2691</td>
+          </tr>
+          <tr>
+            <td>La ilaha illallahu wahdahu la sharika lah... (extended tahlil)</td>
+            <td>10x</td>
+            <td>Reward of freeing 4 slaves from Isma'il's descendants</td>
+            <td>Ahmad, Nasa'i in Amal al-Yawm wal-Laylah</td>
+          </tr>
+          <tr>
+            <td>Salawat upon the Prophet &#65018;</td>
+            <td>10x</td>
+            <td>10 blessings from Allah for each one = 100 blessings. Intercession on Judgment Day</td>
+            <td>Muslim 384, Tabarani</td>
+          </tr>
+          <tr>
+            <td><span class="ar">حَسْبِيَ اللَّهُ لَا إِلَٰهَ إِلَّا هُوَ عَلَيْهِ تَوَكَّلْتُ وَهُوَ رَبُّ الْعَرْشِ الْعَظِيمِ</span><br>"Allah is sufficient for me. There is no god but Him. I rely upon Him, and He is the Lord of the Mighty Throne"</td>
+            <td>7x</td>
+            <td>"Allah will suffice him in all matters that concern him" (Abu Dawud 5081)</td>
+            <td>Abu Dawud 5081</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ===== EVENING ADHKAR ===== -->
+  <section id="evening">
+    <div class="section-tag tag-purple">Evening</div>
+    <h2>Evening Adhkar (Adhkar al-Masa')</h2>
+    <p class="sec-intro">Said after Asr prayer (or after Maghrib according to some scholars) until sleep. The same formulas as the morning adhkar with "amsayna" replacing "asbahna." A few have specific evening additions.</p>
+
+    <div class="callout">
+      <div class="callout-icon">&#128161;</div>
+      <p><strong>Note:</strong> Almost all morning adhkar are repeated in the evening with the wording adjusted (e.g., "we have entered the evening" instead of "we have entered the morning"). The table above applies to both. Below are the evening-specific additions.</p>
+    </div>
+
+    <div class="dhikr-card">
+      <div class="dhikr-header">
+        <div class="dhikr-title">Evening-Specific: Last Two Verses of Al-Baqarah</div>
+        <div class="dhikr-badges"><span class="badge b-purple">Night Protection</span></div>
+      </div>
+      <div class="dhikr-arabic">آمَنَ الرَّسُولُ بِمَا أُنزِلَ إِلَيْهِ مِن رَّبِّهِ وَالْمُؤْمِنُونَ...</div>
+      <div class="dhikr-translit">Surah Al-Baqarah 2:285-286</div>
+      <div class="dhikr-meaning">The final two verses of Surah al-Baqarah — a comprehensive declaration of faith, obedience, and du'a for ease.</div>
+      <div class="dhikr-details">
+        <div class="detail-box"><div class="detail-label when">When</div><div class="detail-text">At night before sleeping. The Prophet &#65018; said these two verses are sufficient for whoever recites them at night.</div></div>
+        <div class="detail-box"><div class="detail-label benefit">Benefits</div><div class="detail-text">"Whoever recites the last two verses of Surah al-Baqarah at night, they will be sufficient for him" (Bukhari 5009) — sufficient as protection from all evil, sufficient in reward, sufficient in every need. They were given to the Prophet on the Night Journey (Isra'), not through Jibril in the usual way.</div></div>
+        <div class="detail-box"><div class="detail-label source">Source</div><div class="detail-text">Bukhari 5009, Muslim 807</div></div>
+      </div>
+    </div>
+
+    <div class="dhikr-card">
+      <div class="dhikr-header">
+        <div class="dhikr-title">Evening-Specific: Surah Al-Mulk</div>
+        <div class="dhikr-badges"><span class="badge b-purple">Shield from Grave</span></div>
+      </div>
+      <div class="dhikr-arabic">تَبَارَكَ الَّذِي بِيَدِهِ الْمُلْكُ...</div>
+      <div class="dhikr-translit">Surah Al-Mulk (67) — 30 verses</div>
+      <div class="dhikr-meaning">The Surah of Sovereignty — recite the entire surah before sleeping.</div>
+      <div class="dhikr-details">
+        <div class="detail-box"><div class="detail-label when">When</div><div class="detail-text">Every night before sleeping.</div></div>
+        <div class="detail-box"><div class="detail-label benefit">Benefits</div><div class="detail-text">"A surah of 30 verses interceded for a man until he was forgiven" (Tirmidhi 2891, Abu Dawud 1400). It protects from the punishment of the grave. The Prophet &#65018; would not sleep until he recited it (Tirmidhi 2892).</div></div>
+        <div class="detail-box"><div class="detail-label source">Source</div><div class="detail-text">Tirmidhi 2891, 2892, Abu Dawud 1400</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== AFTER SALAH ===== -->
+  <section id="salah">
+    <div class="section-tag tag-green">After Salah</div>
+    <h2>Adhkar After Every Salah</h2>
+    <p class="sec-intro">The moments after salah are among the most powerful times for dhikr. The Prophet &#65018; had a specific routine he followed after every obligatory prayer.</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Order</th><th>Dhikr</th><th>Count</th><th>Note</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td><span class="ar">أَسْتَغْفِرُ اللَّهَ</span> Astaghfirullah</td>
+            <td>3x</td>
+            <td>Immediately after salam — seeking forgiveness for any shortcomings in the prayer itself</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td><span class="ar">اللَّهُمَّ أَنْتَ السَّلَامُ وَمِنْكَ السَّلَامُ تَبَارَكْتَ يَا ذَا الْجَلَالِ وَالْإِكْرَامِ</span> "O Allah, You are Peace, from You is peace. Blessed are You, O Possessor of Majesty and Honour."</td>
+            <td>1x</td>
+            <td>Muslim 591. Said immediately after salam before anything else.</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Ayat al-Kursi (2:255)</td>
+            <td>1x</td>
+            <td>"Nothing prevents him from entering Jannah except death" (Nasa'i in al-Kubra)</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td><span class="ar">سُبْحَانَ اللَّهِ</span> Subhanallah</td>
+            <td>33x</td>
+            <td rowspan="3" style="vertical-align: middle;">The famous 33-33-34 set. Equals 99. Then complete 100 with the extended tahlil. "Sins forgiven even if like foam of the sea" (Muslim 597). Can also be done 10-10-10 (Muslim 597) or 33-33-33 then 1x tahlil = 100.</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td><span class="ar">الْحَمْدُ لِلَّهِ</span> Alhamdulillah</td>
+            <td>33x</td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td><span class="ar">اللَّهُ أَكْبَرُ</span> Allahu Akbar</td>
+            <td>34x</td>
+          </tr>
+          <tr>
+            <td>7</td>
+            <td>Extended Tahlil: La ilaha illallahu wahdahu la sharika lah...</td>
+            <td>1x</td>
+            <td>Completes the 100. The seal of the post-salah dhikr.</td>
+          </tr>
+          <tr>
+            <td>8</td>
+            <td>Surah Al-Ikhlas, Al-Falaq, Al-Nas</td>
+            <td>1x each</td>
+            <td>Recommended after every salah. After Maghrib and Fajr: 3x each (Tirmidhi 3575).</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="hadith">
+      <div class="tr">The Prophet &#65018; said: "Whoever glorifies Allah (subhanallah) 33 times after every salah, praises Allah (alhamdulillah) 33 times, and magnifies Allah (Allahu akbar) 34 times — that is 100 — then says 'La ilaha illallahu wahdahu la sharika lah, lahu al-mulku wa lahu al-hamdu wa huwa 'ala kulli shay'in qadir' — his sins will be forgiven even if they were like the foam of the sea."</div>
+      <div class="ref">Sahih Muslim 597</div>
+    </div>
+  </section>
+
+  <!-- ===== BEFORE SLEEP ===== -->
+  <section id="sleep">
+    <div class="section-tag tag-purple">Sleep</div>
+    <h2>Before Sleep</h2>
+    <p class="sec-intro">The Prophet &#65018; had a detailed routine before sleeping — dhikr, du'a, and specific surahs that protect during the vulnerable hours of sleep.</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Practice</th><th>Details</th><th>Benefit</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Ayat al-Kursi</td>
+            <td>Recite once</td>
+            <td>"A protector from Allah will be assigned to you and no devil will come near you until morning" (Bukhari 2311 — the hadith of Abu Hurayrah and the jinn)</td>
+          </tr>
+          <tr>
+            <td>Al-Ikhlas, Al-Falaq, Al-Nas</td>
+            <td>Recite each, blow into cupped hands, wipe over body — 3x</td>
+            <td>The Prophet &#65018; did this every night (Bukhari 5017). Complete protection from evil.</td>
+          </tr>
+          <tr>
+            <td>Last 2 verses of Al-Baqarah</td>
+            <td>Recite 2:285-286</td>
+            <td>"Sufficient for him" — in protection and reward (Bukhari 5009)</td>
+          </tr>
+          <tr>
+            <td>Surah Al-Mulk (67)</td>
+            <td>Recite full surah</td>
+            <td>Intercedes until forgiven. Protects from grave punishment (Tirmidhi 2891).</td>
+          </tr>
+          <tr>
+            <td>Surah Al-Sajdah (32) + Al-Mulk</td>
+            <td>Both recited together</td>
+            <td>"The Prophet &#65018; would not sleep until he recited Alif-Lam-Mim Tanzil (32) and Tabarak (67)" (Tirmidhi 2892)</td>
+          </tr>
+          <tr>
+            <td>Surah Al-Kafirun (109)</td>
+            <td>Recite once</td>
+            <td>"Recite it before sleeping — it is a disavowal of shirk" (Tirmidhi 3403, Abu Dawud 5055)</td>
+          </tr>
+          <tr>
+            <td><span class="ar">بِاسْمِكَ اللَّهُمَّ أَمُوتُ وَأَحْيَا</span><br>"In Your name, O Allah, I die and I live"</td>
+            <td>1x when lying down</td>
+            <td>Acknowledging that sleep is a minor death and waking is a resurrection. Puts your soul in Allah's care (Bukhari 6324).</td>
+          </tr>
+          <tr>
+            <td>Tasbih (33), Tahmid (33), Takbir (34)</td>
+            <td>Total = 100</td>
+            <td>The "Fatimah dhikr" — the Prophet &#65018; taught Fatimah this instead of a servant, saying "This is better for you" (Bukhari 3705). Gives strength for the next day.</td>
+          </tr>
+          <tr>
+            <td>Wudu before sleep</td>
+            <td>Make wudu as for prayer</td>
+            <td>"When you go to bed, make wudu as for prayer, then lie on your right side" (Bukhari 247). An angel makes du'a for you all night.</td>
+          </tr>
+          <tr>
+            <td>Dust off bed 3x</td>
+            <td>With the edge of your garment</td>
+            <td>"For he does not know what came onto it after him" (Bukhari 6320). Sunnah practice to clean the sleeping area.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ===== UPON WAKING ===== -->
+  <section id="waking">
+    <div class="section-tag tag-blue">Waking</div>
+    <h2>Upon Waking</h2>
+    <p class="sec-intro">The very first words and actions after waking set the tone for the entire day.</p>
+
+    <div class="dhikr-card">
+      <div class="dhikr-header">
+        <div class="dhikr-title">First Words Upon Waking</div>
+        <div class="dhikr-badges"><span class="badge b-blue">Sunnah</span></div>
+      </div>
+      <div class="dhikr-arabic">الْحَمْدُ لِلَّهِ الَّذِي أَحْيَانَا بَعْدَمَا أَمَاتَنَا وَإِلَيْهِ النُّشُورُ</div>
+      <div class="dhikr-translit">Alhamdulillahil-ladhi ahyana ba'dama amatana wa ilayhin-nushur</div>
+      <div class="dhikr-meaning">"All praise is for Allah who gave us life after having taken it from us, and to Him is the resurrection."</div>
+      <div class="dhikr-details">
+        <div class="detail-box"><div class="detail-label when">When</div><div class="detail-text">The very first thing you say when you open your eyes. Before getting out of bed. This was the Prophet's practice (Bukhari 6324).</div></div>
+        <div class="detail-box"><div class="detail-label benefit">Benefits</div><div class="detail-text">Begins your day with gratitude and awareness that sleep was a minor death. Sets the spiritual tone — your first conscious thought is of Allah. Fulfils the Sunnah and earns reward from the start of the day.</div></div>
+        <div class="detail-box"><div class="detail-label source">Source</div><div class="detail-text">Bukhari 6324</div></div>
+      </div>
+    </div>
+
+    <div class="callout">
+      <div class="callout-icon">&#128161;</div>
+      <p>After this, proceed with wudu and then the morning adhkar after Fajr prayer. The Sunnah also includes using the miswak upon waking (Bukhari 889).</p>
+    </div>
+  </section>
+
+  <!-- ===== DAILY SITUATIONAL ===== -->
+  <section id="daily">
+    <div class="section-tag tag-teal">Situational</div>
+    <h2>Daily Situational Adhkar</h2>
+    <p class="sec-intro">Islam provides a dhikr for nearly every moment of daily life — transforming routine actions into acts of worship.</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Situation</th><th>Dhikr</th><th>Source</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Entering the home</td><td><em>Bismillah</em> + salam to family. "O Allah, I ask You for the best entrance and the best exit. In the name of Allah we enter, in the name of Allah we leave, and upon Allah our Lord we rely."</td><td>Abu Dawud 5096</td></tr>
+          <tr><td>Leaving the home</td><td><span class="ar">بِسْمِ اللَّهِ تَوَكَّلْتُ عَلَى اللَّهِ لَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللَّهِ</span> "In the name of Allah, I rely upon Allah, there is no power except with Allah." → "You are guided, sufficed, and protected" and the devil turns away from you (Tirmidhi 3426)</td><td>Tirmidhi 3426, Abu Dawud 5095</td></tr>
+          <tr><td>Entering the mosque</td><td>Salawat + <span class="ar">اللَّهُمَّ افْتَحْ لِي أَبْوَابَ رَحْمَتِكَ</span> "O Allah, open for me the doors of Your mercy"</td><td>Muslim 713</td></tr>
+          <tr><td>Leaving the mosque</td><td>Salawat + <span class="ar">اللَّهُمَّ إِنِّي أَسْأَلُكَ مِنْ فَضْلِكَ</span> "O Allah, I ask You of Your bounty"</td><td>Muslim 713</td></tr>
+          <tr><td>Before eating</td><td><em>Bismillah.</em> If you forget: <span class="ar">بِسْمِ اللَّهِ أَوَّلَهُ وَآخِرَهُ</span> "In the name of Allah at its beginning and its end."</td><td>Abu Dawud 3767, Tirmidhi 1858</td></tr>
+          <tr><td>After eating</td><td><span class="ar">الْحَمْدُ لِلَّهِ الَّذِي أَطْعَمَنِي هَٰذَا وَرَزَقَنِيهِ مِنْ غَيْرِ حَوْلٍ مِنِّي وَلَا قُوَّةٍ</span> "Praise be to Allah who fed me this and provided it without any power or might from me" → past sins forgiven (Tirmidhi 3458)</td><td>Tirmidhi 3458</td></tr>
+          <tr><td>Entering the bathroom</td><td><span class="ar">اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْخُبُثِ وَالْخَبَائِثِ</span> "O Allah, I seek refuge in You from evil and the evil ones"</td><td>Bukhari 142, Muslim 375</td></tr>
+          <tr><td>Leaving the bathroom</td><td><span class="ar">غُفْرَانَكَ</span> "Your forgiveness" (Ghufranak)</td><td>Tirmidhi 7, Abu Dawud 30</td></tr>
+          <tr><td>Before wudu</td><td><em>Bismillah</em></td><td>Abu Dawud 101</td></tr>
+          <tr><td>After wudu</td><td><span class="ar">أَشْهَدُ أَنْ لَا إِلَٰهَ إِلَّا اللَّهُ وَأَشْهَدُ أَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُولُهُ</span> → "The 8 gates of Jannah are opened for him" (Muslim 234)</td><td>Muslim 234</td></tr>
+          <tr><td>Hearing the adhan</td><td>Repeat what the mu'adhdhin says, except at "hayya 'ala al-salah/falah" say <em>La hawla wa la quwwata illa billah</em>. Then send salawat and say the du'a after adhan.</td><td>Bukhari 611, Muslim 384</td></tr>
+          <tr><td>Wearing new clothes</td><td><span class="ar">الْحَمْدُ لِلَّهِ الَّذِي كَسَانِي هَٰذَا وَرَزَقَنِيهِ مِنْ غَيْرِ حَوْلٍ مِنِّي وَلَا قُوَّةٍ</span></td><td>Abu Dawud 4023</td></tr>
+          <tr><td>Looking in the mirror</td><td><span class="ar">اللَّهُمَّ كَمَا حَسَّنْتَ خَلْقِي فَحَسِّنْ خُلُقِي</span> "O Allah, as You made my form beautiful, make my character beautiful"</td><td>Ahmad 3823</td></tr>
+          <tr><td>Boarding a vehicle/transport</td><td><span class="ar">سُبْحَانَ الَّذِي سَخَّرَ لَنَا هَٰذَا وَمَا كُنَّا لَهُ مُقْرِنِينَ وَإِنَّا إِلَىٰ رَبِّنَا لَمُنقَلِبُونَ</span> (Qur'an 43:13-14)</td><td>Muslim 1342, Tirmidhi 3446</td></tr>
+          <tr><td>When it rains</td><td><span class="ar">اللَّهُمَّ صَيِّبًا نَافِعًا</span> "O Allah, make it a beneficial rain"</td><td>Bukhari 1032</td></tr>
+          <tr><td>When thunder is heard</td><td><span class="ar">سُبْحَانَ الَّذِي يُسَبِّحُ الرَّعْدُ بِحَمْدِهِ وَالْمَلَائِكَةُ مِنْ خِيفَتِهِ</span></td><td>Muwatta Malik</td></tr>
+          <tr><td>When seeing something pleasing</td><td><span class="ar">اللَّهُمَّ بَارِكْ</span> or <span class="ar">مَا شَاءَ اللَّهُ لَا قُوَّةَ إِلَّا بِاللَّهِ</span></td><td>Qur'an 18:39</td></tr>
+          <tr><td>When angry</td><td><span class="ar">أَعُوذُ بِاللَّهِ مِنَ الشَّيْطَانِ الرَّجِيمِ</span> + make wudu + change position (sit if standing, lie down if sitting)</td><td>Bukhari 6048, Abu Dawud 4782</td></tr>
+          <tr><td>After a gathering</td><td><span class="ar">سُبْحَانَكَ اللَّهُمَّ وَبِحَمْدِكَ أَشْهَدُ أَنْ لَا إِلَٰهَ إِلَّا أَنْتَ أَسْتَغْفِرُكَ وَأَتُوبُ إِلَيْكَ</span> (Kaffarah al-Majlis — the expiation of the gathering. Erases idle talk from the gathering.)</td><td>Abu Dawud 4859, Tirmidhi 3433</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ===== SPECIAL TIMES ===== -->
+  <section id="special">
+    <div class="section-tag tag-orange">Special Times</div>
+    <h2>Special Times &amp; Virtues</h2>
+    <p class="sec-intro">Certain times are more powerful for dhikr and du'a. Knowing these windows maximises the impact of your practice.</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Time</th><th>What to Do</th><th>Why</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Last third of the night</strong></td><td>Tahajjud, istighfar, du'a</td><td>"Allah descends to the lowest heaven and says: 'Is there anyone who asks so that I may give? Is there anyone who seeks forgiveness so that I may forgive?'" (Bukhari 1145, Muslim 758). The most powerful time for du'a.</td></tr>
+          <tr><td><strong>Between adhan and iqamah</strong></td><td>Du'a</td><td>"Du'a between the adhan and iqamah is not rejected" (Tirmidhi 212, Abu Dawud 521).</td></tr>
+          <tr><td><strong>While prostrating (sujud)</strong></td><td>Du'a + tasbih</td><td>"The closest a servant is to his Lord is when he is in sujud, so make abundant du'a" (Muslim 482).</td></tr>
+          <tr><td><strong>Last hour of Friday (before Maghrib)</strong></td><td>Du'a</td><td>"There is an hour on Friday during which no Muslim asks Allah for anything but He gives it to him" (Bukhari 935, Muslim 852). Strongest opinion: last hour before Maghrib.</td></tr>
+          <tr><td><strong>Day of Arafah (9th Dhul Hijjah)</strong></td><td>La ilaha illallah + du'a</td><td>"The best du'a is on the Day of Arafah, and the best thing said by me and the prophets before me is: La ilaha illallahu wahdahu la sharika lah..." (Tirmidhi 3585).</td></tr>
+          <tr><td><strong>First 10 days of Dhul Hijjah</strong></td><td>Takbir, tahlil, tahmid abundantly</td><td>"No days are greater to Allah and no deeds more beloved than these 10 days. So increase in tahlil, takbir, and tahmid" (Ahmad 5446).</td></tr>
+          <tr><td><strong>Ramadan — especially last 10 nights</strong></td><td>All dhikr, du'a, Qur'an</td><td>Laylat al-Qadr is "better than a thousand months" (97:3). Du'a for that night: <em>Allahumma innaka 'afuwwun tuhibbu al-'afwa fa'fu 'anni</em> (Tirmidhi 3513).</td></tr>
+          <tr><td><strong>After obligatory prayers</strong></td><td>Post-salah adhkar</td><td>The Prophet &#65018; stayed in his place after salam specifically for dhikr. Moving away immediately loses this blessed window.</td></tr>
+          <tr><td><strong>While traveling</strong></td><td>Du'a</td><td>"Three supplications are not rejected: the du'a of the traveller..." (Tirmidhi 1905).</td></tr>
+          <tr><td><strong>When it rains</strong></td><td>Du'a</td><td>"Two [du'as] are not rejected: at the time of the adhan and under the rain" (Hakim).</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ===== DISTRESS & PROTECTION ===== -->
+  <section id="distress">
+    <div class="section-tag tag-red">Protection</div>
+    <h2>Distress, Anxiety &amp; Protection</h2>
+    <p class="sec-intro">The Prophet &#65018; taught specific adhkar for moments of worry, fear, sadness, and difficulty. These are spiritual medicine.</p>
+
+    <div class="dhikr-card">
+      <div class="dhikr-header">
+        <div class="dhikr-title">Du'a for Anxiety and Sorrow</div>
+        <div class="dhikr-badges"><span class="badge b-red">Distress Relief</span></div>
+      </div>
+      <div class="dhikr-arabic">اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْهَمِّ وَالْحَزَنِ، وَالْعَجْزِ وَالْكَسَلِ، وَالْبُخْلِ وَالْجُبْنِ، وَضَلَعِ الدَّيْنِ وَغَلَبَةِ الرِّجَالِ</div>
+      <div class="dhikr-translit">Allahumma inni a'udhu bika min al-hammi wal-hazan, wal-'ajzi wal-kasal, wal-bukhli wal-jubn, wa dala'i al-dayni wa ghalabat al-rijal</div>
+      <div class="dhikr-meaning">"O Allah, I seek refuge in You from worry and grief, from inability and laziness, from miserliness and cowardice, from the burden of debt and the overpowering of men."</div>
+      <div class="dhikr-details">
+        <div class="detail-box"><div class="detail-label when">When</div><div class="detail-text">Whenever feeling anxious, worried, overwhelmed, or depressed. Anas said the Prophet &#65018; used to say this frequently (Bukhari 2893).</div></div>
+        <div class="detail-box"><div class="detail-label benefit">Benefits</div><div class="detail-text">Covers 8 afflictions in 4 pairs — past grief & future worry, inability & laziness, miserliness & cowardice, debt & domination. A comprehensive shield against every form of psychological distress.</div></div>
+        <div class="detail-box"><div class="detail-label source">Source</div><div class="detail-text">Bukhari 2893, 6369</div></div>
+      </div>
+    </div>
+
+    <div class="dhikr-card">
+      <div class="dhikr-header">
+        <div class="dhikr-title">Du'a of Yunus (in the Whale)</div>
+        <div class="dhikr-badges"><span class="badge b-gold">Never Fails</span></div>
+      </div>
+      <div class="dhikr-arabic">لَا إِلَٰهَ إِلَّا أَنتَ سُبْحَانَكَ إِنِّي كُنتُ مِنَ الظَّالِمِينَ</div>
+      <div class="dhikr-translit">La ilaha illa anta subhanaka inni kuntu min al-dhalimin</div>
+      <div class="dhikr-meaning">"There is no god but You. Glory be to You. Indeed, I have been among the wrongdoers." — The du'a of Prophet Yunus from the belly of the whale.</div>
+      <div class="dhikr-details">
+        <div class="detail-box"><div class="detail-label when">When</div><div class="detail-text">Any moment of distress, difficulty, or when feeling trapped in a situation with no way out. The beauty is it combines tawhid, tasbih, and confession of shortcoming — all the elements of a perfect du'a.</div></div>
+        <div class="detail-box"><div class="detail-label benefit">Benefits</div><div class="detail-text">"No Muslim calls upon Allah with this du'a regarding any matter except that Allah answers him" (Tirmidhi 3505). The Prophet &#65018; gave a universal guarantee — it works for <em>any</em> matter, not just extreme distress.</div></div>
+        <div class="detail-box"><div class="detail-label source">Source</div><div class="detail-text">Qur'an 21:87, Tirmidhi 3505</div></div>
+      </div>
+    </div>
+
+    <div class="dhikr-card">
+      <div class="dhikr-header">
+        <div class="dhikr-title">When Struck by Calamity</div>
+        <div class="dhikr-badges"><span class="badge b-green">Replaced with Better</span></div>
+      </div>
+      <div class="dhikr-arabic">إِنَّا لِلَّهِ وَإِنَّا إِلَيْهِ رَاجِعُونَ. اللَّهُمَّ أْجُرْنِي فِي مُصِيبَتِي وَأَخْلِفْ لِي خَيْرًا مِنْهَا</div>
+      <div class="dhikr-translit">Inna lillahi wa inna ilayhi raji'un. Allahumma ajurni fi musibati wa akhlif li khayran minha</div>
+      <div class="dhikr-meaning">"To Allah we belong and to Him we return. O Allah, reward me in my calamity and replace it with something better."</div>
+      <div class="dhikr-details">
+        <div class="detail-box"><div class="detail-label when">When</div><div class="detail-text">At the moment of any loss, hardship, or calamity — death, financial loss, illness, failure, heartbreak. Say it immediately when the news hits.</div></div>
+        <div class="detail-box"><div class="detail-label benefit">Benefits</div><div class="detail-text">Umm Salamah narrated this — when Abu Salamah died, she said it, wondering "who could be better than Abu Salamah?" Allah replaced him with the Prophet Muhammad &#65018; himself as her husband. "Whoever says this, Allah will reward him in his affliction and replace it with something better" (Muslim 918).</div></div>
+        <div class="detail-box"><div class="detail-label source">Source</div><div class="detail-text">Muslim 918</div></div>
+      </div>
+    </div>
+
+    <div class="dhikr-card">
+      <div class="dhikr-header">
+        <div class="dhikr-title">Protection from Evil Eye</div>
+        <div class="dhikr-badges"><span class="badge b-teal">Daily Shield</span></div>
+      </div>
+      <div class="dhikr-arabic">أَعُوذُ بِكَلِمَاتِ اللَّهِ التَّامَّاتِ مِنْ شَرِّ مَا خَلَقَ</div>
+      <div class="dhikr-translit">A'udhu bikalimatillahi al-tammati min sharri ma khalaq</div>
+      <div class="dhikr-meaning">"I seek refuge in the perfect words of Allah from the evil of what He has created."</div>
+      <div class="dhikr-details">
+        <div class="detail-box"><div class="detail-label when">When</div><div class="detail-text">Evening. When staying somewhere (travel, hotel, new place). The Prophet &#65018; said: "Whoever stops at a place and says this, nothing will harm him until he leaves that place" (Muslim 2708).</div></div>
+        <div class="detail-box"><div class="detail-label how">How Often</div><div class="detail-text"><strong>3x evening.</strong> Also when entering any new place or feeling unsafe.</div></div>
+        <div class="detail-box"><div class="detail-label benefit">Benefits</div><div class="detail-text">Complete protection from evil — including jinn, evil eye, scorpion/snake, and all creation. The Prophet &#65018; used to say this over Hasan and Husayn for protection (Bukhari 3371).</div></div>
+        <div class="detail-box"><div class="detail-label source">Source</div><div class="detail-text">Muslim 2708, Bukhari 3371</div></div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ===== BUILDING YOUR WIRD ===== -->
+  <section id="wird">
+    <div class="section-tag tag-gold">Practice</div>
+    <h2>Building Your Wird (Daily Litany)</h2>
+    <p class="sec-intro">A <em>wird</em> is your fixed daily spiritual practice — the non-negotiable minimum you do every single day. The scholars say: "The wird is not what you do when you have time. It is what you do before everything else."</p>
+
+    <div class="callout">
+      <div class="callout-icon">&#128161;</div>
+      <p><strong>The Prophet's Advice:</strong> "The most beloved deeds to Allah are the most consistent, even if small" (Bukhari 6464). Choose a wird you can sustain <em>forever</em> — even on your worst day. Then never leave it. Better to do a small amount consistently for 40 years than to do a large amount for 2 weeks and stop.</p>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Level</th><th>Daily Wird</th><th>Time Needed</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Beginner</strong></td>
+            <td>After each salah: 33 Subhanallah + 33 Alhamdulillah + 34 Allahu Akbar + 1x Extended Tahlil. Morning: Ayat al-Kursi + 3x Ikhlas/Falaq/Nas. 100x Astaghfirullah anytime. 100x Salawat anytime.</td>
+            <td>~15-20 min total</td>
+          </tr>
+          <tr>
+            <td><strong>Intermediate</strong></td>
+            <td>All of the above + Full morning adhkar + Full evening adhkar + 100x La ilaha illallah + 100x Subhanallahi wa bihamdihi + Before-sleep adhkar (Mulk + last 2 of Baqarah + Ikhlas/Falaq/Nas)</td>
+            <td>~30-40 min total</td>
+          </tr>
+          <tr>
+            <td><strong>Advanced</strong></td>
+            <td>All of the above + Tahajjud (even 2 rak'at) + 1 juz' Qur'an daily + 1,000x La ilaha illallah + 1,000x Salawat + Muhasabah journal before sleep + Muraqabah (5-10 min contemplative presence)</td>
+            <td>~1.5-2 hours total</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="hadith">
+      <div class="ar">لَا تَتْرُكِ الذِّكْرَ لِعَدَمِ حُضُورِكَ مَعَ اللَّهِ فِيهِ، لِأَنَّ غَفْلَتَكَ عَنْ وُجُودِ ذِكْرِهِ أَشَدُّ مِنْ غَفْلَتِكَ فِي وُجُودِ ذِكْرِهِ</div>
+      <div class="tr">"Do not abandon dhikr because you do not feel present with Allah in it, for your heedlessness without dhikr is worse than your heedlessness during dhikr. Perhaps He will raise you from dhikr with heedlessness to dhikr with awareness, and from dhikr with awareness to dhikr with presence, and from dhikr with presence to dhikr where everything else is absent — and that is not difficult for Allah."</div>
+      <div class="ref">— Ibn 'Ata'illah al-Iskandari, al-Hikam (#67)</div>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  <div class="ar">فَاذْكُرُونِي أَذْكُرْكُمْ وَاشْكُرُوا لِي وَلَا تَكْفُرُونِ</div>
+  <p style="font-style:italic; margin-bottom:16px;">"So remember Me; I will remember you. And be grateful to Me and do not deny Me." — Surah Al-Baqarah 2:152</p>
+  <p>Compiled for Azri's Tassawuf Studies | April 2026</p>
+</footer>
+
+<script>
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+}, { threshold: 0.05 });
+document.querySelectorAll('section').forEach(s => observer.observe(s));
+document.querySelectorAll('.toc-link').forEach(link => {
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+    const target = document.querySelector(link.getAttribute('href'));
+    if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+});
+</script>
+
+</body>
+</html>
